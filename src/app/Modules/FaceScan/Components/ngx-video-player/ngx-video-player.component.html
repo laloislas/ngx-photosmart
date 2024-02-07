@@ -1,0 +1,4 @@
+@if (videoPlayerView && modelsReady && stream){
+<video [style.height]="'auto'" #videoElement [srcObject]="stream" (loadedmetadata)="loadMetaData()"
+    (play)="listenerPlay()" webkit-playsinline playsinline class="video"></video>
+}

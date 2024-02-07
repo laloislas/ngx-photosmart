@@ -1,0 +1,10 @@
+<div class="videoCheck__container__video" [style.width]="width - 50 + 'px'" [style.height]="height + 'px'">
+    <ngx-video-player [stream]="currentStream" [width]="width * 2" [height]="height" [onlyMovil]="false"
+        (foundFace)="foundFace($event)" class="videoCheck__container__video__center"
+        [style.display]="capturedImage ? 'none' : 'flex'"></ngx-video-player>
+</div>
+@if (scoreFace && !capturedImage) {
+<div class="videoCheck__cointainer__conunter" [style.width]="width - 50 + 'px'" [style.height]="height + 'px'">
+    <span>{{ counter }}</span>
+</div>
+}
